@@ -1,0 +1,32 @@
+{
+    "name": "rade88/filesystem",
+    "description": "filesystem for laravel",
+    "type": "library",
+    "require": {
+        "league/flysystem-aws-s3-v3": "~1.0",
+        "aws/aws-sdk-php-laravel": "~3.0",
+        "microsoft/azure-storage-file": "^1.0",
+        "symfony/http-foundation": "~4.0",
+        "league/flysystem-azure-blob-storage": "^0.1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Filesystem\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": "dev-master",
+        "laravel": {
+            "providers": [
+                "Filesystem\\FIleStorageServiceProvider"
+            ]
+        },
+        "minimum-stability": "dev"
+    },
+    "authors": [
+        {
+            "name": "mradojicic",
+            "email": "milos.radojicic@oddity.agency"
+        }
+    ]
+}
