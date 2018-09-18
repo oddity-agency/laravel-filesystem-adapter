@@ -20,7 +20,7 @@
                 "Filesystem\\FIleStorageServiceProvider"
             ]
         },
-        "minimum-stability": "dev"
+        "minimum-stability": "stable"
     },
     "authors": [
         {
