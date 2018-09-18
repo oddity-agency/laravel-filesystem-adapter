@@ -8,7 +8,7 @@ Services for laravel for storage manipulation
 
 Add to require in composer.json
 
-* `"rade88/filesystem": " dev-master"`
+* `"oddity-agency/laravel-filesystem-adapter": " dev-master"`
 
 ### Configuration
 
