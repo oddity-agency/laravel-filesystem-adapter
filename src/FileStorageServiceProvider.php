@@ -42,6 +42,10 @@ class FileStorageServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
+		$this->publishes([
+			__DIR__.'provider/FileStorageServiceProvider.php'
+		], 'provider');
+
 		$this->config = config('filesystems');
 
 		$this->isSupportedStorage();
