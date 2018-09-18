@@ -8,7 +8,7 @@ use Filesystem\Models\S3Model;
 use Illuminate\Support\ServiceProvider;
 use Filesystem\Interfaces\FileSystemInterface;
 
-class FIleStorageServiceProvider extends ServiceProvider
+class FileStorageServiceProvider extends ServiceProvider
 {
 
 	protected $supported = ['s3', 'azure', 'local'];
@@ -28,7 +28,7 @@ class FIleStorageServiceProvider extends ServiceProvider
 	protected $app;
 
 	/**
-	 * FIleStorageServiceProvider constructor.
+	 * FileStorageServiceProvider constructor.
 	 * @param \Illuminate\Contracts\Foundation\Application $app
 	 */
 	public function __construct(\Illuminate\Contracts\Foundation\Application $app)

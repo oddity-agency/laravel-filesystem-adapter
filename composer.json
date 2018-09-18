@@ -17,7 +17,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Filesystem\\FIleStorageServiceProvider"
+                "Filesystem\\FileStorageServiceProvider"
             ]
         },
         "minimum-stability": "stable"
