@@ -1,5 +1,5 @@
 {
-    "name": "rade88/filesystem",
+    "name": "oddity-agency/laravel-filesystem-adapter",
     "description": "filesystem for laravel",
     "type": "library",
     "require": {
