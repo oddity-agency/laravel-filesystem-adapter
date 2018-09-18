@@ -29,7 +29,7 @@ class S3Model implements Storage
         });
 
 		$app->bind(FileSystemInterface::class, function ($app) use ($config) {
-			return new FileSystemS3Service(new \Filesystem\Services\AWSStorageService(), $config['disks'][$config['default']['bucket']]);
+			return new FileSystemS3Service(new \Filesystem\Services\AWSStorageService(), $config);
 		});
 	}
 
