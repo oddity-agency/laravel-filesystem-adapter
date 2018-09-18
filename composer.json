@@ -15,7 +15,6 @@
         }
     },
     "extra": {
-        "branch-alias": "dev-master",
         "laravel": {
             "providers": [
                 "Filesystem\\FIleStorageServiceProvider"
