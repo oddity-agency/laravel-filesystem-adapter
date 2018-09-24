@@ -130,4 +130,14 @@ class AWSStorageService
 			'Key'    => $fileName,
 		]);
 	}
+
+	/**
+	 * @param $bucket
+	 * @param $path
+	 * @return mixed
+	 */
+	public function deleteDir($bucket, $path)
+	{
+		return $this->client->deleteMatchingObjects($bucket, $path);
+	}
 }

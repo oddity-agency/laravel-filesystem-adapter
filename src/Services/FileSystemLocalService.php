@@ -106,4 +106,18 @@ class FileSystemLocalService implements FileSystemInterface
 
 		return false;
 	}
+
+	/**
+	 * @param $path
+	 * @return bool
+	 */
+	public function deleteDir($path)
+	{
+
+        if($this->disk->deleteDir($path)){
+            return true;
+		}
+
+		return false;
+	}
 }

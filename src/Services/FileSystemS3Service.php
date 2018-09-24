@@ -93,4 +93,14 @@ class FileSystemS3Service implements FileSystemInterface
 	{
 		return $this->awsClient->delete($this->bucket, $fileName);
 	}
+
+	/**
+	 * @param $path
+	 * @return mixed
+	 */
+	public function deleteDir($path)
+	{
+		return $this->awsClient->deleteDir($this->bucket, $path);
+	}
+
 }

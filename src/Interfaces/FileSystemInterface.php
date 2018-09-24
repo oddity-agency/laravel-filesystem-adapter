@@ -40,4 +40,11 @@ interface FileSystemInterface
 	 * @return mixed
 	 */
 	public function delete($fileName);
+
+	/**
+	 * @param $path
+	 * @return mixed
+	 */
+	public function deleteDir($path);
+
 }

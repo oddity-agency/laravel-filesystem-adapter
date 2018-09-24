@@ -142,4 +142,13 @@ class AzureStorageService implements FileSystemInterface
 	{
 		return $this->filesystem->delete($fileName);
 	}
+
+	/**
+	 * @param $path
+	 * @return bool
+	 */
+	public function deleteDir($path)
+	{
+		return $this->filesystem->deleteDir($path);
+	}
 }
