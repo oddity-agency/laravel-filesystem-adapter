@@ -83,12 +83,15 @@ class AWSStorageService
 	 */
 	public function putFile($bucket, UploadedFile $file, $path)
 	{
-		$this->client->putObject([
-			'Bucket'        => $bucket,
-			'Key'           => $path,
-			'Body'          => '',
-			'ACL'           => 'public-read',
-		]);
+		if($path != ''){
+			$this->client->putObject([
+				'Bucket'        => $bucket,
+				'Key'           => $path,
+				'Body'          => '',
+				'ACL'           => 'public-read',
+			]);
+		}
+
 
 		return $this->client->putObject([
 			'Bucket'        => $bucket,
