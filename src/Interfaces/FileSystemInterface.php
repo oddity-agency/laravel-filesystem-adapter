@@ -45,6 +45,12 @@ interface FileSystemInterface
 	 * @param $path
 	 * @return mixed
 	 */
+	public function createDir($path);
+
+	/**
+	 * @param $path
+	 * @return mixed
+	 */
 	public function deleteDir($path);
 
 }

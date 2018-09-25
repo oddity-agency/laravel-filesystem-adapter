@@ -145,6 +145,16 @@ class AzureStorageService implements FileSystemInterface
 
 	/**
 	 * @param $path
+	 * @return bool|mixed
+	 */
+	public function createDir($path)
+	{
+		return $this->filesystem->createDir($path, $this->config);
+	}
+
+
+	/**
+	 * @param $path
 	 * @return bool
 	 */
 	public function deleteDir($path)

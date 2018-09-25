@@ -136,6 +136,21 @@ class AWSStorageService
 	 * @param $path
 	 * @return mixed
 	 */
+	public function createDir($bucket, $path)
+	{
+		return $this->client->putObject([
+			'Bucket'        => $bucket,
+			'Key'           => $path,
+			'Body'          => '',
+			'ACL'           => 'public-read',
+		]);
+	}
+
+	/**
+	 * @param $bucket
+	 * @param $path
+	 * @return mixed
+	 */
 	public function deleteDir($bucket, $path)
 	{
 		return $this->client->deleteMatchingObjects($bucket, $path);

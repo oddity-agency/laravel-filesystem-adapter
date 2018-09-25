@@ -109,6 +109,16 @@ class FileSystemLocalService implements FileSystemInterface
 
 	/**
 	 * @param $path
+	 * @return mixed|void
+	 */
+	public function createDir($path)
+	{
+		$this->disk->createDir($path);
+	}
+
+
+	/**
+	 * @param $path
 	 * @return bool
 	 */
 	public function deleteDir($path)
