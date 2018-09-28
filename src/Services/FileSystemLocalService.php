@@ -42,17 +42,21 @@ class FileSystemLocalService implements FileSystemInterface
 		$this->localStorageClient = $localStorageService;
 	}
 
-    /**
-     * @param $file
-     * @throws FileNotFoundException
-     */
+	/**
+	 * @param $file
+	 * @return bool|mixed
+	 * @throws FileNotFoundException
+	 */
 	public function checkIfFileExists($file)
-    {
-        $file = ltrim($file, '/');
-        if(!file_exists($this->path.'/'.$file)){
-            throw new FileNotFoundException();
-        }
-    }
+	{
+		$file = ltrim($file, '/');
+
+		if($notExists = !$this->disk->exists($file)){
+			throw new FileNotFoundException();
+		}
+
+		return !$notExists;
+	}
 
 	/**
 	 * @return array|mixed
