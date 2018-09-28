@@ -35,13 +35,12 @@ class FileSystemS3Service implements FileSystemInterface
 
 	/**
 	 * @param $path
-	 * @return mixed|void
-	 * @throws \Exception
+	 * @return mixed
 	 */
 	public function checkIfFileExists($path)
 	{
 		try{
-			$this->awsClient->checkIfFileExists($this->bucket, $path);
+			return $this->awsClient->checkIfFileExists($this->bucket, $path);
 		} catch (\Exception $e) {
 			get_headers($path);
 		}
