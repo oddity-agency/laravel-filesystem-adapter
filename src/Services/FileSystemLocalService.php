@@ -113,11 +113,11 @@ class FileSystemLocalService implements FileSystemInterface
 
 	/**
 	 * @param $path
-	 * @return mixed|void
+	 * @return mixed
 	 */
 	public function createDir($path)
 	{
-		$this->disk->createDir($path);
+		return $this->disk->createDir($path);
 	}
 
 
