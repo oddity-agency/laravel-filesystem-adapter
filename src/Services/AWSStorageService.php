@@ -99,7 +99,7 @@ class AWSStorageService
 			'Key'           => $path.$file->getClientOriginalName(),
 			'Body'          => file_get_contents($file),
 			'ACL'           => 'public-read',
-			'ContentType'   => $file->getMimeType(),
+			'ContentType'   => $file->getClientMimeType(),
 			'Prefix'        => $path,
 		]);
 	}
