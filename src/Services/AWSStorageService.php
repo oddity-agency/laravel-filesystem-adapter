@@ -93,6 +93,7 @@ class AWSStorageService
 		}
 
 
+
 		return $this->client->putObject([
 			'Bucket'        => $bucket,
 			'Key'           => $path.$file->getClientOriginalName(),
